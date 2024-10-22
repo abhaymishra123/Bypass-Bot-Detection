@@ -1,6 +1,6 @@
 
 
-🛠️ Starting Point: Free Web Proxies
+**🛠️ Starting Point: Free Web Proxies**
 
 When I first encountered a website that blocked my attempts to scrape data, I decided to use free web proxies. At this point, I wasn’t very familiar with advanced methods, so proxies seemed like a simple solution. Proxies helped by making my requests appear as if they were coming from different IP addresses. 
 
@@ -18,7 +18,7 @@ Proxy 3 🌐 : https://proxyium.com/
 
 While this approach worked for some time, I soon realized that many websites had more sophisticated detection mechanisms. Some sites blocked proxies or detected automated requests even with different IPs.
 
-🏗️ Next Step: Fake User Agents & Headers
+**🏗️ Next Step: Fake User Agents & Headers**
 
 When free proxies didn’t solve all my problems, I moved to the next level: fake user agents and custom request headers. 
 
@@ -37,7 +37,7 @@ headers = {
 
 This worked for a wider range of sites, but not all. Some websites were able to detect automated scripts despite these adjustments. 
 
-🕵️‍♂️ Advanced Techniques: Selenium Stealth
+**🕵️‍♂️ Advanced Techniques: Selenium Stealth**
 
 To handle the sites that still blocked my requests, I found Selenium Stealth, a Python library that mimics human behavior while interacting with a website. 
 
@@ -49,7 +49,7 @@ Why this was a game-changer:
 
 I integrated Selenium Stealth and successfully scraped websites that previously blocked both free proxies and fake user agents. However, a new challenge arose when I tried running this setup on our server.
 
-🖥️ Headless Mode Issues: PyVirtualDisplay to the Rescue
+**🖥️ Headless Mode Issues: PyVirtualDisplay to the Rescue**
 
 While Selenium Stealth worked great locally, the real problem appeared when I deployed the script on our server. The headless mode (used because the server didn’t have a graphical interface) didn’t behave the same as a regular browser.
 
@@ -61,7 +61,7 @@ PyVirtualDisplay provides a virtual display on a server, allowing Selenium to ru
 
 This solved the problem for 30+ sanctions lists that weren’t being scraped due to headless detection. 
 
-🔍 Analyzing Chrome Headers for Ultimate Bypass
+**🔍 Analyzing Chrome Headers for Ultimate Bypass**
 
 There were still some websites that my tools couldn’t bypass. Oddly, these sites worked fine on a regular Chrome browser but not through Selenium. I decided to compare the request headers sent by Chrome vs. Selenium.
 
@@ -77,7 +77,7 @@ sec-fetch-mode
 
 📊 Result: This technique worked! By replicating the exact headers, my requests appeared even more like they were coming from a normal browser, bypassing detection.
 
-🚧 Still Evolving: Challenges with Cloudflare & Human Verification
+**🚧 Still Evolving: Challenges with Cloudflare & Human Verification**
 
 Despite all these advancements, some websites that use Cloudflare or human verification mechanisms still block requests made with Selenium. These sites often present a CAPTCHA or similar human verification challenges.
 
